@@ -4,6 +4,7 @@ import './index.css';
 import NameForm from './NameForm';
 import EssayForm from './EssayForm';
 import FlavorForm from './FlavorForm';
+import Reservation from './Reservation';
 import * as serviceWorker from './serviceWorker';
 
 const elements = <div>
@@ -13,6 +14,8 @@ const elements = <div>
                     <EssayForm />
                     <h3>Selection Form</h3>
                     <FlavorForm />
+                    <h3>Mult-Field Form</h3>
+                    <Reservation />
                 </div>;
 
 ReactDOM.render(elements, document.getElementById('root'));
