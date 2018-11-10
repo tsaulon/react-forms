@@ -1,19 +1,19 @@
 import React, { Component } from 'react';
-import './NameForm.css';
+import './EssayForm.css'
 
-//  This class represents a form which accepts text input
-class NameForm extends Component {
+class EssayForm extends Component {
 
     constructor(props) {
         super(props);
         this.state = {
-            value: ''
-        }
+            value: 'Write about JavaScript.'
+        };
 
         this.handleChange = this.handleChange.bind(this);
         this.handleSubmit = this.handleSubmit.bind(this);
     }
 
+    //  listen for changes and set state for every change made to the textarea
     handleChange(event) {
         this.setState({
             value: event.target.value
@@ -21,19 +21,22 @@ class NameForm extends Component {
     }
 
     handleSubmit(event) {
-        alert(`A name has been submitted! ${this.state.value}`);
+        alert(`An essay was submitted: ${this.state.value}`)
         event.preventDefault();
     }
 
     render() {
+
         return (
             <form onSubmit={this.handleSubmit}>
-                <label>Name:</label>
-              <input type="text" value={this.state.value} onChange={this.handleChange} />
+                <label>
+                    Essay:
+              <textarea value={this.state.value} onChange={this.handleChange} />
+                </label>
                 <input type="submit" value="Submit" />
             </form>
-        );
+        )
     }
 }
 
-export default NameForm;
+export default EssayForm
