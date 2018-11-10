@@ -28,6 +28,12 @@ class FlavorForm extends Component {
             <form onSubmit={this.handleSubmit}>
                 <label>
                     Pick your favorite flavor:
+                    {/* 
+                        You can pass an array into the value attribute, 
+                        allowing you to select multiple options in a select tag:
+                    
+                        <select multiple={true} value={['B', 'C']}>
+                    */}
                 <select value={this.state.value} onChange={this.handleChange}>
                         <option value="grapefruit">Grapefruit</option>
                         <option value="lime">Lime</option>
