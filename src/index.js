@@ -3,12 +3,17 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import NameForm from './NameForm';
 import EssayForm from './EssayForm';
+import FlavorForm from './FlavorForm';
 import * as serviceWorker from './serviceWorker';
 
-const elements = <ul>
-                    <li><NameForm /></li>
-                    <li><EssayForm /></li>
-                </ul>;
+const elements = <div>
+                    <h3>Text Input Type Form</h3>
+                    <NameForm />
+                    <h3>TextArea Form</h3>
+                    <EssayForm />
+                    <h3>Selection Form</h3>
+                    <FlavorForm />
+                </div>;
 
 ReactDOM.render(elements, document.getElementById('root'));
 
